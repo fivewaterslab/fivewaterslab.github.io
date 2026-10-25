@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Five Waters Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: the logo lockup sets the system: tracked serif caps, a short rule, wide-spaced sans labels, navy with one lighter blue. Light theme only, by request. */
+:root{
+  --bg:#FFFFFF; --band:#F4F6FA; --navy:#14305E; --blue:#3563A8; --muted:#5A6F94; --line:#DDE3EE;
+  --display:"Playfair Display", "Didot", "Bodoni 72", Georgia, serif;
+  --sans:"Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--navy);font-family:var(--sans);font-size:17px;line-height:1.65;margin:0}
+.in{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.caps{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--blue)}
+
+/* Header */
+header{border-bottom:1px solid var(--line)}
+header .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand span{font-family:var(--display);font-size:17px;letter-spacing:.2em}
+nav{display:flex;gap:28px}
+nav a{text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+nav a:hover{color:var(--navy)}
+@media (max-width:600px){nav{display:none}}
+
+/* Hero: the lockup at full size */
+.hero{background:var(--band);border-bottom:1px solid var(--line)}
+.hero .in{padding-block:88px 80px;display:flex;align-items:center;gap:clamp(20px,4vw,44px);flex-wrap:wrap}
+.hero svg.mark{width:clamp(84px,14vw,132px);height:auto;flex:none}
+.lockup{display:grid;gap:14px;min-width:0}
+.lockup h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,7vw,66px);letter-spacing:.14em;line-height:1;margin:0}
+.tag{display:flex;align-items:center;gap:18px}
+.tag::before{content:"";height:1px;width:clamp(40px,12vw,150px);background:var(--navy);flex:none}
+.tag span{font-size:clamp(10px,1.6vw,13px)}
+
+/* Sections */
+section .in{padding-block:64px;display:grid;grid-template-columns:200px 1fr;gap:28px}
+section + section .in{border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.2;margin:0;text-wrap:balance}
+section p{margin:12px 0 0;color:var(--muted);max-width:60ch}
+.sec-label{padding-top:12px}
+@media (max-width:680px){section .in{grid-template-columns:1fr;gap:10px;padding-block:48px}}
+
+.team{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.person{border:1px solid var(--line);padding:20px 22px;display:grid;gap:6px}
+.person h3{font-family:var(--display);font-weight:400;font-size:22px;margin:0}
+@media (max-width:520px){.team{grid-template-columns:1fr}}
+
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:24px}
+.email{font-size:18px;letter-spacing:.02em;user-select:all;padding:11px 16px;background:var(--band);border:1px solid var(--line)}
+.copy{font:500 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--navy);color:var(--navy);background:var(--bg);padding:13px 18px;cursor:pointer}
+.copy:hover{background:var(--navy);color:var(--bg)}
+
+footer{background:var(--band);border-top:1px solid var(--line)}
+footer .in{padding-block:26px 36px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fw" viewBox="0 0 40 40">
+      <rect x="1" y="1" width="38" height="38" fill="none" stroke="#14305E" stroke-width="1.5"/>
+      <g fill="none" stroke-width="1.4" stroke-linecap="round">
+        <path stroke="#14305E" d="M9.5 7 q-1.6 3.25 0 6.5 t0 6.5 t0 6.5 t0 6.5"/>
+        <path stroke="#14305E" d="M14.75 7 q-1.6 3.25 0 6.5 t0 6.5 t0 6.5 t0 6.5"/>
+        <path stroke="#3563A8" d="M20 7 q-1.6 3.25 0 6.5 t0 6.5 t0 6.5 t0 6.5"/>
+        <path stroke="#14305E" d="M25.25 7 q-1.6 3.25 0 6.5 t0 6.5 t0 6.5 t0 6.5"/>
+        <path stroke="#14305E" d="M30.5 7 q-1.6 3.25 0 6.5 t0 6.5 t0 6.5 t0 6.5"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="in">
+    <a class="brand" href="#top" aria-label="Five Waters Lab home">
+      <svg><use href="#fw"/></svg>
+      <span>FIVE WATERS</span>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="in">
+    <svg class="mark" viewBox="0 0 40 40" role="img" aria-label="Five Waters logo"><use href="#fw"/></svg>
+    <div class="lockup">
+      <h1>FIVE WATERS</h1>
+      <div class="tag"><span class="caps">Lab · Quantitative Research</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="in">
+    <span class="caps sec-label">About</span>
+    <div>
+      <h2>A student-run quantitative research group</h2>
+      <p>Five Waters Lab is run by master's students in quantitative finance. We work on research questions in markets and publish what we find.</p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="in">
+    <span class="caps sec-label">Research</span>
+    <div>
+      <h2>Research</h2>
+      <p>Our first projects will be published here soon.</p>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="in">
+    <span class="caps sec-label">Team</span>
+    <div>
+      <h2>Team</h2>
+      <div class="team">
+        <div class="person"><span class="caps">Co-founder</span><h3>Kaiser</h3></div>
+        <div class="person"><span class="caps">Co-founder</span><h3>Second founder</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="in">
+    <span class="caps sec-label">Contact</span>
+    <div>
+      <h2>Get in touch</h2>
+      <div class="contact">
+        <span class="email" id="email">hello@fivewaterslab.com</span>
+        <button class="copy" id="copy" type="button">Copy address</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="in">
+    <span>© 2026 Five Waters Lab</span>
+    <span>Kiel, Germany</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  const btn=this,el=document.getElementById('email');
+  const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy address',1600)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C'};
+  try{navigator.clipboard.writeText(el.textContent).then(done,fallback)}catch(e){fallback()}
+});
+</script>
+</body>
+</html>
